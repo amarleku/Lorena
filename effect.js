@@ -193,6 +193,19 @@ $('document').ready(function(){
 		msgLoop(0);
 		
 	});
+	$('#video-button').click(function(){
+		$(this).fadeOut('slow');
+		$('.message').fadeOut('fast').promise().done(function(){
+			$('.video').fadeIn('slow');
+		});
+		
+		var i;
+
+	
+		
+		msgLoop(0);
+		
+	});
 });
 
 
