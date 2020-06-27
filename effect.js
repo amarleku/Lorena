@@ -196,8 +196,8 @@ $('document').ready(function(){
 	$('#video-button').click(function(){
 		$(this).fadeOut('slow');
 		$('.message').fadeOut('fast').promise().done(function(){
-			var audio1 = $('.song')[1];
-        audio1.start();
+			var audio1 = $('.song')[0];
+        audio1.stop();
 			$('.video').fadeIn('slow');
 			
 		});
