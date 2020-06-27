@@ -25,10 +25,17 @@ $('document').ready(function(){
 		$('#bulb_orange').addClass('bulb-glow-orange');
 		$('body').addClass('peach');
 		$(this).fadeOut('slow').delay(5000).promise().done(function(){
-			$('#play').fadeIn('slow');
+			$('#video-button').fadeIn('slow');
 		});
 	});
+
+	$('#video-button').click(function(){
+		$(this).fadeOut('slow');
+		$('.video').fadeIn('slow');
+			$('#play').fadeIn('slow');
+	});
 	$('#play').click(function(){
+		$('.video').fadeOut('slow');
 		var audio = $('.song')[0];
         audio.play();
         $('#bulb_yellow').addClass('bulb-glow-yellow-after');
@@ -193,22 +200,7 @@ $('document').ready(function(){
 		msgLoop(0);
 		
 	});
-	$('#video-button').click(function(){
-		$(this).fadeOut('slow');
-		$('.message').fadeOut('fast').promise().done(function(){
-			var audio1 = $('.song')[0];
-        audio1.stop();
-			$('.video').fadeIn('slow');
-			
-		});
-		
-		var i;
 
-	
-		
-		msgLoop(0);
-		
-	});
 });
 
 
